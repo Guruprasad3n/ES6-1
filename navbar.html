@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        #navbar {
+            height: 60px;
+            width: 100%;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #logo{
+            width: 20%;
+        }
+        #logo>img{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            
+            /* border: 1px solid red; */
+        }
+
+        #searchbar{
+            width: 45%;
+            height: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        #results{
+            width: 100%;
+        }
+        #searchbar>input{
+            display: block;
+            margin: auto;
+            width:100%;
+            height: 60%;
+            /* margin-left: -15%; */
+        }
+        button{
+            width: 10%;
+            height: 70%;
+            /* margin-right: 20px; */
+            /* margin-left: -25%; */
+        }
+        #logos{
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+        }
+        #mic{
+            width: 10%;
+            margin-left: 20px;
+        }
+        #ic{
+            width: 10%;
+            margin-left: 10%;
+        }
+        #results{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto, 350px);
+        gap: 15px;
+        margin-top: 20px;
+    }
+    #results>div>iframe{
+        /* height: 200px; */
+    }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://www.seekpng.com/png/detail/77-772362_youtube-logo-youtube-logo-png.png" alt="">
+            <!-- <h1>YouTube</h1> -->
+        </div>
+        <div id="searchbar">
+            <input id="query" type="text" placeholder="Search">
+            <button onclick="search()"> Search </button>
+        </div>
+        <div id="logos">
+            <img id="mic" src="./images.jfif" alt="">
+            <img id="ic" src="./computer-icons-symbol-png-favpng-jdAw0710JVA2gLweyB0pXbGVt-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <div id="results"></div>
+</body>
+
+</html>
+<script src="./index.js"></script>
